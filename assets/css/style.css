@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+nav{
+    font-family: helvetica, sanserif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 10px;
+}
 .start-page{
     font-family: helvetica, sanserif;
     max-width: 1000px;
@@ -38,20 +45,17 @@
     
 }
 .main-container h2{
-    text-align: center;
-    margin: 10px;
-}
-.main-container p{
-    text-align: center;
-    margin: 20px;
+    margin: 30px 100px;
+    text-align: left;
 }
 .main-container ul li{
-    margin: 0 auto;
+    margin: 8px 100px;
     background-color: #29387A;
     padding: 15px 20px;
     color: white;
     border-radius: 10px;
-    width: 15%;
+    width: 20%;
+    border: none;
 }
 .main-container ul li:hover{
     background-color: #D3A7FC;
