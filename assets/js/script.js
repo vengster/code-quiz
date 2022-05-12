@@ -20,7 +20,7 @@ var questions = [{
     choiceA:"quotes",
     choiceB:"curly brackets",
     choiceC:"perenthesis",
-    chioceD:"square brackets",
+    choiceD:"square brackets",
     correctAnswer: "c"
 },
 {
@@ -28,7 +28,7 @@ var questions = [{
     choiceA:"numbers and strings",
     choiceB:"other arrays",
     choiceC:"booleans",
-    chioceD:"all of the above",
+    choiceD:"all of the above",
     correctAnswer: "d"
 },
 {
@@ -36,7 +36,7 @@ var questions = [{
     choiceA:"commas",
     choiceB:"curly brackets",
     choiceC:"quotes",
-    chioceD:"parenthesis",
+    choiceD:"parenthesis",
     correctAnswer: "c"
 },
 {
@@ -44,17 +44,17 @@ var questions = [{
     choiceA:"javaScript",
     choiceB:"terminal/bash",
     choiceC:"for loops",
-    chioceD:"console.log",
+    choiceD:"console.log",
     correctAnswer: "d"
-},
-
-];
+}];
+console.log(questions);
 
 
 
 
 
 var currentQuiz = 0;
+console.log(currentQuiz);
 
 
 // test click function
@@ -69,7 +69,7 @@ function startQuiz(){
     answerC.innerHTML = currentQuizData.choiceC;
     answerD.innerHTML = currentQuizData.choiceD;
 
-    currentQuiz++;
+    //currentQuiz++;
     
     function hideStart(){
         startPage.style.display="none";
@@ -77,6 +77,34 @@ function startQuiz(){
     }
     hideStart();
 };
+
+
+var p = document.createElement("p");
+var comms = document.getElementById("comments")
+function checkAnswer(){
+    if (questions[0].choiceC){
+        console.log(questions[0].choiceC);
+        p.textContent = "Correct!";
+        console.log(p);
+        comms.appendChild(p);
+        questions++;
+    }
+    else if(questions[0].choiceA){
+        p.textContent = "Incorrect!";
+        comms.appendChild(p);
+    }
+    if (currentQuiz < questions.length){
+        currentQuiz++;
+    }
+    
+}
+
+
+
+answerC.addEventListener("click", checkAnswer);
+answerA.addEventListener("click", checkAnswer);
+
+
 
 var startBtn = document.querySelector("#start-q");
 
